@@ -1,0 +1,604 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+    background-image: repeating-radial-gradient(#000000 87%, #212121 90%);
+    background-size: 50px 50px;
+
+
+}
+
+/*-------------------------------menu----------------------------------------*/
+
+.bg-black {
+    background-color: #000 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+
+.menu-fixed {
+    position: fixed;
+    top: -80px;
+    width: 100%;
+    background-color: transparent;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+.menu-fixed.show {
+    top: 0;
+}
+
+.separador {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px 0;
+}
+
+/*----------------------------------portada---------------------------------------------*/
+
+.img_index {
+    background-image: url(..//Imagenes/banner.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.button {
+    border-radius: .25rem;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #fff;
+    -webkit-clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 100%);
+    clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 100%);
+    height: 40px;
+    font-size: 0.7rem;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+    transition: .2s .1s;
+    background-image: linear-gradient(90deg, #01161e, #4ce3f7);
+    border: 0 solid;
+    overflow: hidden;
+}
+
+.section_explorar button:hover {
+    cursor: pointer;
+    transition: all .3s ease-in;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.section_explorar button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.section_explorar {
+    color: #fff;
+}
+
+.section_explorar a {
+    color: #fff;
+}
+
+/*-------------------------------------------------sesion y redes-------------------------------------*/
+
+.img_index .section_log_in {
+    margin: 3vh 20px;
+}
+
+.section_log_in .redes_sociales {
+    position: absolute;
+    margin-left: 55vh;
+}
+
+.input {
+    width: 100%;
+    height: 45px;
+    line-height: 80px;
+    padding: 0 5rem;
+    padding-left: 3rem;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    background-color: #f8fafc;
+    color: #0d0c22;
+    transition: .5s ease;
+}
+
+.input::placeholder {
+    color: #94a3b8;
+}
+
+.input:focus,
+input:hover {
+    outline: none;
+    border-color: rgba(129, 140, 248);
+    background-color: #fff;
+    box-shadow: 0 0 0 5px rgb(129 140 248 / 30%);
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: none;
+    width: 1rem;
+    height: 1rem;
+}
+
+
+.checkbox-wrapper * {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+.config_check {
+    display: flex;
+    flex-direction: row;
+}
+
+.config_check .Recuerdame {
+    margin-left: 5px;
+    color: #fff;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-wrapper label {
+    --size: 20px;
+    --shadow: calc(var(--size) * .07) calc(var(--size) * .1);
+    position: relative;
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    margin: 0 auto;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    border-radius: 50%;
+    box-shadow: 0 var(--shadow) #ffbeb8;
+    cursor: pointer;
+    transition: 0.2s ease transform, 0.2s ease background-color,
+        0.2s ease box-shadow;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.checkbox-wrapper label:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: calc(var(--size) * .7);
+    height: calc(var(--size) * .7);
+    margin: 0 auto;
+    background-color: #a6e9f2;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    box-shadow: inset 0 var(--shadow) #ffbeb8;
+    transition: 0.2s ease width, 0.2s ease height;
+}
+
+.checkbox-wrapper label:hover:before {
+    width: calc(var(--size) * .55);
+    height: calc(var(--size) * .55);
+    box-shadow: inset 0 var(--shadow) #ff9d96;
+}
+
+.checkbox-wrapper label:active {
+    transform: scale(0.9);
+}
+
+.checkbox-wrapper .tick_mark {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    left: calc(var(--size) * -.05);
+    width: calc(var(--size) * .6);
+    height: calc(var(--size) * .6);
+    margin: 0 auto;
+    margin-left: calc(var(--size) * .14);
+    transform: rotateZ(-40deg);
+}
+
+.checkbox-wrapper .tick_mark:before,
+.checkbox-wrapper .tick_mark:after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    border-radius: 2px;
+    opacity: 0;
+    transition: 0.2s ease transform, 0.2s ease opacity;
+}
+
+.checkbox-wrapper .tick_mark:before {
+    left: 0;
+    bottom: 0;
+    width: calc(var(--size) * .1);
+    height: calc(var(--size) * .3);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.23);
+    transform: translateY(calc(var(--size) * -.68));
+}
+
+.checkbox-wrapper .tick_mark:after {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(var(--size) * .1);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.23);
+    transform: translateX(calc(var(--size) * .78));
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked+label {
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked+label:before {
+    width: 0;
+    height: 0;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked+label .tick_mark:before,
+.checkbox-wrapper input[type="checkbox"]:checked+label .tick_mark:after {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.redes_sociales button:hover {
+    cursor: pointer;
+    transition: all .3s ease-in;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.social {
+    text-decoration: none;
+    font-style: normal;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.Facebook:hover {
+    color: #4158D0;
+}
+
+.instagram:hover {
+    color: #C850C0;
+}
+
+.Google:hover {
+    color: #FFCC70;
+}
+
+.Facebook {
+    color: #fff
+}
+
+.instagram {
+    color: #fff
+}
+
+.Google {
+    color: #fff
+}
+
+/*----------------------------------------filtros---------------------------------------*/
+
+.columna_filtro {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 790px) {
+    .columna_filtro {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+        grid-gap: 10px;
+    }
+
+    .filtros_icons .iconos_filtro {
+        aspect-ratio: 1 / 1;
+        width: 80px;
+    }
+}
+
+.filtros_icons .iconos_filtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    width: 100px;
+    border: solid 2px rgb(216, 228, 255);
+}
+
+.iconos_filtro svg {
+    height: 3rem;
+    width: 3rem;
+    fill: rgb(255, 255, 255);
+}
+
+.filtros_icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(199, 199, 199);
+}
+
+.iconos_filtro:hover,
+svg:hover {
+    background-color: rgb(216, 228, 255);
+    border-color: transparent;
+    cursor: pointer;
+    fill: #000000;
+    color: #000000;
+}
+
+.iconos_filtro:hover svg path {
+    fill: #000000;
+}
+
+.filtros_icons:hover label {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+.mydict {
+    margin-bottom: 20px;
+}
+
+.mydict div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    justify-content: center;
+}
+
+.mydict input[type="radio"] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.mydict input[type="radio"]:checked+span {
+    box-shadow: 0 0 0 0.0625em #0043ed;
+    background-color: #dee7ff;
+    z-index: 1;
+    color: #0043ed;
+}
+
+label span {
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 0.375em .75em;
+    position: relative;
+    margin-left: .0625em;
+    box-shadow: 0 0 0 0.0625em #b5bfd9;
+    letter-spacing: .05em;
+    color: #3e4963;
+    text-align: center;
+    transition: background-color .5s ease;
+}
+
+label:first-child span {
+    border-radius: .375em 0 0 .375em;
+}
+
+label:last-child span {
+    border-radius: 0 .375em .375em 0;
+}
+
+.locacion_evento {
+    display: flex;
+    flex-flow: row;
+}
+
+.locacion_evento p {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.buscar svg path {
+    fill: #fff;
+}
+
+/*---------------------------------------stats----------------------------------------*/
+
+
+.flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 400px;
+    perspective: 1000px;
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    filter: drop-shadow(4px 4px 6px rgba(255, 255, 255, 0.5));
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #3DC1D5;
+    border-radius: 1rem;
+}
+
+.flip-card-front img {
+    border-radius: 15px;
+}
+
+.flip-card-back button {
+    border-radius: 15px;
+    width: 50%;
+}
+
+.flip-card-back p {
+    margin: 8px;
+}
+
+.flip-card-front {
+    background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+            rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+    color: coral;
+}
+
+.flip-card-back {
+    background: linear-gradient(120deg, rgb(5, 5, 5) 30%, rgb(61, 193, 213) 88%);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.button_attend {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-left: 6.5vw;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10rem;
+    transition: all 0.02s;
+    font-weight: bold;
+    color: rgb(37, 37, 37);
+    z-index: 0;
+    box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+}
+
+.button_attend:hover {
+    background: rgb(193, 228, 248);
+    color: rgb(33, 0, 85);
+}
+
+.button_attend:active {
+    transform: scale(0.97);
+}
+
+.hoverEffect {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.hoverEffect div {
+    background: rgb(222, 0, 75);
+    background: linear-gradient(90deg, rgba(222, 0, 75, 1) 0%, rgba(191, 70, 255, 1) 49%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 40rem;
+    width: 10rem;
+    height: 10rem;
+    transition: 0.4s;
+    filter: blur(20px);
+    animation: effect infinite 3s linear;
+    opacity: 0.5;
+}
+
+.button_attend:hover .hoverEffect div {
+    width: 8rem;
+    height: 8rem;
+}
+
+@keyframes effect {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*-----------------------------footer--------------------------------------*/
+
+footer {
+    margin-top: 1vw;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+
+}
+
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*---------------------------------------------@media´s--------------------------------------------*/
+
+@media (max-width: 790px) {
+    .redes_sociales {
+        display: none;
+    }
+
+    .bar {
+        display: block;
+    }
+
+    .other {
+        display: none;
+    }
+
+    .navbar_home {
+        display: none;
+    }
+
+}
