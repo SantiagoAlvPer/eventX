@@ -488,9 +488,9 @@ label:last-child span {
 }
 
 .flip-card-front {
-    background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
-            rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
-    color: coral;
+    background: linear-gradient(120deg, rgb(196, 244, 255) 60%, rgb(215, 215, 215) 88%,
+            rgb(230, 230, 230) 40%, #3DC1D5 48%);
+    color: rgb(0, 0, 0);
 }
 
 .flip-card-back {

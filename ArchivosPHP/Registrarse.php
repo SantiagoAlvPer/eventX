@@ -20,15 +20,15 @@
               $tipo="Empresario";
             }
 
-            echo "
-             <br>$name
-             <br> $apellido
-             <br> $fecha_nacimiento
-             <br> $email
-             <br> $tel
-             <br> $pass
-             <br> $tipo
-           ";
+          //   echo "
+          //    <br>$name
+          //    <br> $apellido
+          //    <br> $fecha_nacimiento
+          //    <br> $email
+          //    <br> $tel
+          //    <br> $pass
+          //    <br> $tipo
+          //  ";
 
             try {
               $sql = "INSERT INTO usuarios (NOMBRE, APELLIDOS, FECHA_NACIMIENTO, EMAIL, TELEFONO, PASS, TIPO) 
@@ -75,7 +75,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="..//ArchivosHTML/prueba.html">Inicio</a>
+            <a class="nav-link" href="..//ArchivosHTML/index.html">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about">Acerca de</a>
